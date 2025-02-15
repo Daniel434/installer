@@ -7,6 +7,9 @@ user=$(whoami)
 
 # Determine Raspbian version
 version_msg="Unknown Raspbian Version"
+if [ "$rasp_version" -eq "11" ]; then
+	version_msg="Raspbian 11.0 (Bullseye)"
+	php_package="php7.3-cgi"
 if [ "$rasp_version" -eq "10" ]; then
 	version_msg="Raspbian 10.0 (Buster)"
 	php_package="php7.3-cgi"
